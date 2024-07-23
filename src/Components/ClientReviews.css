@@ -1,0 +1,9 @@
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: transparent !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
