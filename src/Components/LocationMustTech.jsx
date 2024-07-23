@@ -79,11 +79,11 @@ const LocationMustTech = () => {
     <div className='container-fluid' style={{ backgroundColor: "#262424", marginTop: "0px" }}>
     
     <Container style={{backgroundColor:'#262424'}}>
-      <Row>
+      <Row style={{paddingTop:"100px"}}>
         <Col md={6}>
           <div>
-            <h2 style={{color:"#FB5C46", marginTop:"50px", marginBottom:"30px", fontSize:"35px"}}>Discover MustTechSolutions</h2>
-            <MapContainer style={{ height: '300px', width: '100%' }} center={[51.505, -0.09]} zoom={13}>
+            <h2 style={{color:"#FB5C46", marginTop:"100px", marginBottom:"30px", fontSize:"35px"}}>Discover MustTechSolutions</h2>
+            {/* <MapContainer style={{ height: '300px', width: '100%' }} center={[51.505, -0.09]} zoom={13}>
               <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -91,6 +91,17 @@ const LocationMustTech = () => {
               <Marker position={[51.505, -0.09]}>
                 <Popup>
                   MustTechSolutions is here. <br /> 1234 Street Name, City, Country.
+                </Popup>
+              </Marker>
+            </MapContainer> */}
+            <MapContainer style={{ height: '300px', width: '100%' }} center={[31.3574681, 74.3517023]} zoom={13}>
+              <TileLayer
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              />
+              <Marker position={[31.3574681, 74.3517023]}>
+                <Popup>
+                  MustTechSolutions is here. <br /> Model Town, C-Block Lahore Pakistan.
                 </Popup>
               </Marker>
             </MapContainer>

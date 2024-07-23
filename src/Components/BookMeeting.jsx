@@ -88,7 +88,7 @@ const BookMeeting = () => {
             <button>Book Now</button>
         </Row> */}
 
-        <Row style={{marginBottom:"100px"}}>
+        <Row style={{marginBottom:"100px", paddingTop:"100px"}}>
           <div style={{color:"#FB5C46", marginTop:"50PX", fontSize:"33px", fontWeight:"700"}}> Come And Join</div>
           <div style={{color:"white", fontSize:"40px", marginTop:"30px", fontWeight:"700"}}> BOOKING YOUR <br/> MEETING NOW
           </div>
