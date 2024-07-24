@@ -1,0 +1,38 @@
+.slider-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%; /* Adjust width as needed */
+    position: relative;
+  }
+  
+  .slider-content {
+    display: inline-flex;
+    animation: slide 20s linear infinite;
+  }
+  
+  .slider-container.paused .slider-content {
+    animation-play-state: paused;
+  }
+  
+  .slider-button {
+    margin: 0 10px; /* Adjust spacing as needed */
+    padding: 10px 20px;
+    /* background-color: #007bff; */
+    background-color: #262424;
+    /* color: white; */
+    color: #FB5C46;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  @keyframes slide {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  

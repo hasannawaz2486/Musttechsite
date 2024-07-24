@@ -244,17 +244,348 @@
 
 
 
+// import { useState, useEffect } from "react";
+// import { Link } from "react-router-dom";
+// import Container from "react-bootstrap/Container";
+// import Nav from "react-bootstrap/Nav";
+// import Navbar from "react-bootstrap/Navbar";
+// import { FaGlobe, FaBars, FaTimes } from "react-icons/fa";
+// import { IoIosNotificationsOutline } from "react-icons/io";
+// import './MustTechNavBar.css'
+// export default function MustTechNavBar() {
+//   const [expanded, setExpanded] = useState(false);
+//   const [isMobile, setIsMobile] = useState(false);
+
+//   const texts = {
+//     en: {
+//       home: "Home",
+//       about: "About",
+//       portfolio: "Portfolio",
+//       pricing: "Pricing",
+//       contactus: "ContactUs",
+//       hireUs: "Hire Us",
+//     },
+//   };
+
+//   useEffect(() => {
+//     const checkIsMobile = () => {
+//       setIsMobile(window.innerWidth <= 768);
+//     };
+//     checkIsMobile();
+//     const intervalId = setInterval(checkIsMobile, 1);
+//     return () => clearInterval(intervalId);
+//   }, []);
+
+//   const handleToggle = () => {
+//     setExpanded(!expanded);
+//   };
+
+//   const handleNavLinkClick = () => {
+//     setExpanded(false);
+//   };
+
+//   // const handleNavMouseEnter = (e) => {
+//   //   e.target.style.color = "#FB5C46";
+//   // };
+
+//   // const handleNavMouseLeave = (e) => {
+//   //   e.target.style.color = "#FB5C46";
+ 
+//   // };
+//   const handleNavMouseEnter = (e) => {
+//     e.target.style.color = "#FB5C46";
+
+//   };
+  
+//   const handleNavMouseLeave = (e) => {
+//     e.target.style.color = "white";
+
+//   };
+
+//   return (
+//     <div>
+//       <Navbar
+//         expand="lg"
+//         expanded={expanded}
+//         onToggle={() => setExpanded(!expanded)}
+//         style={{
+//           position: "fixed",
+//           width: "100%",
+//           zIndex: 1000,
+//           backgroundColor: "#262424",
+//           padding: "0.1rem 0",
+//           height: "5rem",
+//           top: "0",
+//         }}
+//       >
+//         <Container style={{ backgroundColor: "#262424" }}>
+//           {!isMobile && (
+//             <Navbar.Brand
+//               as={Link}
+//               to="/"
+//               onClick={() => setExpanded(false)}
+//               style={{ margin: "0px 10px" }}
+//             >
+//               <img
+//                 src={"../assets/musttechlogo.png"}
+//                 alt=""
+//                 style={{
+//                   width: "183px",
+//                   height: "38px",
+//                   margin: "auto",
+//                   marginRight: "auto",
+//                 }}
+//               />
+//             </Navbar.Brand>
+//           )}
+
+//           {isMobile ? (
+//             <button
+//               aria-controls="navbarScroll"
+//               onClick={handleToggle}
+//               className={expanded ? "black-toggle" : ""}
+//               style={{
+//                 background: "none",
+//                 border: "none",
+//                 cursor: "pointer",
+//                 fontSize: "24px",
+//                 color: "white",
+//                 marginLeft: "20px",
+//               }}
+//             >
+//               {expanded ? <FaTimes /> : <FaBars />}
+//             </button>
+//           ) : null}
+
+//           <Navbar.Collapse id="navbarScroll">
+//             <Nav style={{ marginLeft:isMobile? "0px":"30%" , marginRight:isMobile? "0px": "2%" }}>
+//               {Object.keys(texts.en).map((key) => (
+//                 key !== "hireUs" && (
+//                   <Nav.Link
+//                     as={Link}
+//                     to={`/${key.charAt(0).toUpperCase() + key.slice(1)}`}
+//                     onClick={handleNavLinkClick}
+//                     onMouseEnter={handleNavMouseEnter}
+//                     onMouseLeave={handleNavMouseLeave}
+//                     style={{
+//                       fontWeight: "500",
+//                       color: "white",
+//                       fontSize: "14px",
+//                       padding: isMobile ? "10px 25px" : "5px",
+//                       textAlign: isMobile ? "left" : "center",
+//                       margin: "0 10px",
+//                     }}
+//                     key={key}
+//                   >
+//                     {texts.en[key]}
+//                   </Nav.Link>
+//                 )
+//               ))}
+//             </Nav>
+
+//             <button
+//               className="buttonn d-flex align-items-center"
+//               style={{
+//                 backgroundColor: "#262424",
+//                 color: "#fff",
+//                 width: "79px",
+//                 height: "38px",
+//                 border: "1px solid #FB5C46",
+//                 borderRadius: "6px",
+//                 marginLeft:isMobile? "30px":"auto",
+//                 justifyContent: "center",
+//                 marginBottom:isMobile?"10px":"auto"
+//               }}
+//             >
+//               {texts.en.hireUs}
+//             </button>
+//           </Navbar.Collapse>
+//         </Container>
+//       </Navbar>
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+// adding some stuff 2
+
+// import { useState, useEffect } from "react";
+// import { Link, useLocation } from "react-router-dom";
+// import Container from "react-bootstrap/Container";
+// import Nav from "react-bootstrap/Nav";
+// import Navbar from "react-bootstrap/Navbar";
+// import { FaBars, FaTimes } from "react-icons/fa";
+// import './MustTechNavBar.css';
+
+// export default function MustTechNavBar() {
+//   const [expanded, setExpanded] = useState(false);
+//   const [isMobile, setIsMobile] = useState(false);
+//   const location = useLocation();
+
+//   const texts = {
+//     en: {
+//       home: "Home",
+//       about: "About",
+//       portfolio: "Portfolio",
+//       pricing: "Pricing",
+//       contactus: "ContactUs",
+//       hireUs: "Hire Us",
+//     },
+//   };
+
+//   useEffect(() => {
+//     const checkIsMobile = () => {
+//       setIsMobile(window.innerWidth <= 768);
+//     };
+//     checkIsMobile();
+//     const intervalId = setInterval(checkIsMobile, 1);
+//     return () => clearInterval(intervalId);
+//   }, []);
+
+//   const handleToggle = () => {
+//     setExpanded(!expanded);
+//   };
+
+//   const handleNavLinkClick = () => {
+//     setExpanded(false);
+//   };
+
+//   const handleNavMouseEnter = (e) => {
+//     e.target.style.color = "#FB5C46";
+//   };
+
+//   const handleNavMouseLeave = (e) => {
+//     e.target.style.color = location.pathname === e.target.getAttribute('to') ? "#FB5C46" : "white";
+//   };
+
+//   return (
+//     <div>
+//       <Navbar
+//         expand="lg"
+//         expanded={expanded}
+//         onToggle={() => setExpanded(!expanded)}
+//         style={{
+//           position: "fixed",
+//           width: "100%",
+//           zIndex: 1000,
+//           backgroundColor: "#262424",
+//           padding: "0.1rem 0",
+//           height: "5rem",
+//           top: "0",
+//         }}
+//       >
+//         <Container style={{ backgroundColor: "#262424" }}>
+//           {!isMobile && (
+//             <Navbar.Brand
+//               as={Link}
+//               to="/"
+//               onClick={() => setExpanded(false)}
+//               style={{ margin: "0px 10px" }}
+//             >
+//               <img
+//                 src={"../assets/musttechlogo.png"}
+//                 alt=""
+//                 style={{
+//                   width: "183px",
+//                   height: "38px",
+//                   margin: "auto",
+//                   marginRight: "auto",
+//                 }}
+//               />
+//             </Navbar.Brand>
+//           )}
+
+//           {isMobile ? (
+//             <button
+//               aria-controls="navbarScroll"
+//               onClick={handleToggle}
+//               className={expanded ? "black-toggle" : ""}
+//               style={{
+//                 background: "none",
+//                 border: "none",
+//                 cursor: "pointer",
+//                 fontSize: "24px",
+//                 color: "white",
+//                 marginLeft: "20px",
+//               }}
+//             >
+//               {expanded ? <FaTimes /> : <FaBars />}
+//             </button>
+//           ) : null}
+
+//           <Navbar.Collapse id="navbarScroll">
+//             <Nav style={{ marginLeft: isMobile ? "0px" : "30%", marginRight: isMobile ? "0px" : "2%" }}>
+//               {Object.keys(texts.en).map((key) => (
+//                 key !== "hireUs" && (
+//                   <Nav.Link
+//                     as={Link}
+//                     to={`/${key.charAt(0).toUpperCase() + key.slice(1)}`}
+//                     onClick={handleNavLinkClick}
+//                     onMouseEnter={handleNavMouseEnter}
+//                     onMouseLeave={handleNavMouseLeave}
+//                     style={{
+//                       fontWeight: "500",
+//                       color: location.pathname === `/${key.charAt(0).toUpperCase() + key.slice(1)}` ? "#FB5C46" : "white",
+//                       fontSize: "14px",
+//                       padding: isMobile ? "10px 25px" : "5px",
+//                       textAlign: isMobile ? "left" : "center",
+//                       margin: "0 10px",
+//                       position: "relative",
+//                       display: "inline-block",
+//                     }}
+//                     key={key}
+//                   >
+//                     {texts.en[key]}
+//                     <span className="underline"></span>
+//                   </Nav.Link>
+//                 )
+//               ))}
+//             </Nav>
+
+//             <button
+//               className="buttonn d-flex align-items-center"
+//               style={{
+//                 backgroundColor: "#262424",
+//                 color: "#fff",
+//                 width: "79px",
+//                 height: "38px",
+//                 border: "1px solid #FB5C46",
+//                 borderRadius: "6px",
+//                 marginLeft: isMobile ? "30px" : "auto",
+//                 justifyContent: "center",
+//                 marginBottom: isMobile ? "10px" : "auto"
+//               }}
+//             >
+//               {texts.en.hireUs}
+//             </button>
+//           </Navbar.Collapse>
+//         </Container>
+//       </Navbar>
+//     </div>
+//   );
+// }
+
+
+
+// adding stuff 03 working properly
+
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { FaGlobe, FaBars, FaTimes } from "react-icons/fa";
-import { IoIosNotificationsOutline } from "react-icons/io";
+import { FaBars, FaTimes } from "react-icons/fa";
+import './MustTechNavBar.css';
 
 export default function MustTechNavBar() {
   const [expanded, setExpanded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const location = useLocation();
+  const [activeLink, setActiveLink] = useState(location.pathname);
 
   const texts = {
     en: {
@@ -280,16 +611,20 @@ export default function MustTechNavBar() {
     setExpanded(!expanded);
   };
 
-  const handleNavLinkClick = () => {
+  const handleNavLinkClick = (path) => {
+    setActiveLink(path);
     setExpanded(false);
   };
 
   const handleNavMouseEnter = (e) => {
     e.target.style.color = "#FB5C46";
+
+
   };
 
   const handleNavMouseLeave = (e) => {
-    e.target.style.color = "#000";
+    e.target.style.color = activeLink === e.target.getAttribute('href') ? "#FB5C46" : "white";
+    // e.target.style.textDecoration = "underline";
   };
 
   return (
@@ -330,6 +665,28 @@ export default function MustTechNavBar() {
           )}
 
           {isMobile ? (
+
+<>
+
+<div>
+              <img
+src={"../assets/musttechlogo.png"}
+alt=""
+style={{
+  width: "183px",
+  height: "38px",
+  margin: "auto",
+  marginRight: "auto",
+}}
+/>
+            </div>
+
+
+
+
+
+
+            
             <button
               aria-controls="navbarScroll"
               onClick={handleToggle}
@@ -340,34 +697,40 @@ export default function MustTechNavBar() {
                 cursor: "pointer",
                 fontSize: "24px",
                 color: "white",
-                marginLeft: "20px",
+                marginLeft: "auto",
               }}
             >
               {expanded ? <FaTimes /> : <FaBars />}
             </button>
+            </>
+
+           
           ) : null}
 
           <Navbar.Collapse id="navbarScroll">
-            <Nav style={{ marginLeft:isMobile? "0px":"30%" , marginRight:isMobile? "0px": "2%" }}>
+            <Nav style={{ marginLeft: isMobile ? "0px" : "30%", marginRight: isMobile ? "0px" : "2%" }}>
               {Object.keys(texts.en).map((key) => (
                 key !== "hireUs" && (
                   <Nav.Link
                     as={Link}
                     to={`/${key.charAt(0).toUpperCase() + key.slice(1)}`}
-                    onClick={handleNavLinkClick}
+                    onClick={() => handleNavLinkClick(`/${key.charAt(0).toUpperCase() + key.slice(1)}`)}
                     onMouseEnter={handleNavMouseEnter}
                     onMouseLeave={handleNavMouseLeave}
                     style={{
                       fontWeight: "500",
-                      color: "white",
+                      color: activeLink === `/${key.charAt(0).toUpperCase() + key.slice(1)}` ? "#FB5C46" : "white",
                       fontSize: "14px",
                       padding: isMobile ? "10px 25px" : "5px",
                       textAlign: isMobile ? "left" : "center",
                       margin: "0 10px",
+                      position: "relative",
+                      display: "inline-block",
                     }}
                     key={key}
                   >
                     {texts.en[key]}
+                    <span className="underline"></span>
                   </Nav.Link>
                 )
               ))}
@@ -382,9 +745,9 @@ export default function MustTechNavBar() {
                 height: "38px",
                 border: "1px solid #FB5C46",
                 borderRadius: "6px",
-                marginLeft:isMobile? "30px":"auto",
+                marginLeft: isMobile ? "30px" : "auto",
                 justifyContent: "center",
-                marginBottom:isMobile?"10px":"auto"
+                marginBottom: isMobile ? "10px" : "auto"
               }}
             >
               {texts.en.hireUs}
@@ -395,7 +758,5 @@ export default function MustTechNavBar() {
     </div>
   );
 }
-
-
 
 

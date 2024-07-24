@@ -113,18 +113,19 @@ export default function Comp1() {
                     <h5 style={{ color: "white", marginTop: "20px", textAlign: "left" }}>
                         Transforming Your Concepts into Concrete Achievements.
                     </h5>
-                    <MDBBtn style={{
+                    <button style={{
                         backgroundColor: "#FB5C46",
                         color: "white",
                         marginTop: "20px",
                         width: "198px",
                         height: "55px",
                         borderRadius: "5px",
-                        fontWeight:"700"
+                        fontWeight:"700",
+                        fontSize:"28px"
                         // fontSize:"900"
                     }}>
                         Start Now
-                    </MDBBtn>
+                    </button>
                 </div>
             </div>
         </div>

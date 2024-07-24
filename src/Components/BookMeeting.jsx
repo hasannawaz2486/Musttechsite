@@ -90,7 +90,7 @@ const BookMeeting = () => {
 
         <Row style={{marginBottom:"100px", paddingTop:"100px"}}>
           <div style={{color:"#FB5C46", marginTop:"50PX", fontSize:"33px", fontWeight:"700"}}> Come And Join</div>
-          <div style={{color:"white", fontSize:"40px", marginTop:"30px", fontWeight:"700"}}> BOOKING YOUR <br/> MEETING NOW
+          <div style={{color:"white", fontSize:"40px", marginTop:"30px", fontWeight:"700"}}> BOOK YOUR <br/> MEETING NOW
           </div>
           <div style={{color:"#FB5C46", fontSize:"40px", marginTop:"100px", fontWeight:"700"}}>SELECT YOUR TIME SLOT</div>
           <div style={{color:"white",fontSize:"20px", marginTop:"20px"}}> We appreciate your interest in meeting with us. Please select a convenient time slot using the Calendly link below to schedule a meeting and discuss how we can collaborate towards project success.</div>

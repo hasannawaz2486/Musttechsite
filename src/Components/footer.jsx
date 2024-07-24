@@ -317,50 +317,50 @@ export default function Footer() {
         <MDBContainer className='text-center text-md-start mt-5'>
           <MDBRow className='mt-3'>
             <MDBCol md='3' lg='4' xl='3' className='mx-auto mt-5'>
-              <img src='./assets/musttechlogo.png' alt='Logo' style={{ maxWidth: '190px', height: 'auto' }} />
+              <img src='./assets/musttechlogo.png' alt='Logo' style={{ maxWidth: '290px', height: 'auto' }} />
             </MDBCol>
 
             <MDBCol md='2' lg='2' xl='2' className='mx-auto mb-4' style={{textAlign:isMobile ?"left":"left", marginTop:isMobile?"20px":"0px"}}>
               <h6 className='text-uppercase fw-bold mb-1' style={{color:"white"}}>We Offer</h6>
-              <p style={{color:"white"}}>
-                <a style={{ display: 'block', marginBottom: '1px' }}>Web development</a>
+              <p style={{color:"white", marginBottom:"2px"}}>
+                <a style={{ display: 'block', marginBottom: '1px', fontSize:"12px" }}>Web development</a>
               </p>
-              <p style={{color:"white"}}>
-                <a style={{ display: 'block', marginBottom: '1px' }}>Mobile App development</a>
+              <p style={{color:"white",marginBottom:"2px"}}>
+                <a style={{ display: 'block', marginBottom: '-1px',fontSize:"12px"  }}>Mobile App development</a>
               </p>
-              <p style={{color:"white"}}>
-                <a style={{ display: 'block', marginBottom: '1px' }}>Project Management</a>
+              <p style={{color:"white",marginBottom:"2px"}}>
+                <a style={{ display: 'block', marginBottom: '-1px',fontSize:"12px"  }}>Project Management</a>
               </p>
-              <p style={{color:"white"}}>
-                <a style={{ display: 'block', marginBottom: '10px' }}>BlockChain Development</a>
+              <p style={{color:"white",marginBottom:"2px"}}>
+                <a style={{ display: 'block', marginBottom: '-1px',fontSize:"12px"  }}>BlockChain Development</a>
               </p>
-              <p style={{color:"white"}}>
-                <a style={{ display: 'block', marginBottom: '10px' }}>Saas Services</a>
+              <p style={{color:"white",marginBottom:"2px"}}>
+                <a style={{ display: 'block', paddingBottom: '-1px',fontSize:"12px"  }}>Saas Services</a>
               </p>
-              <p style={{color:"white"}}>
-                <a style={{ display: 'block', marginBottom: '10px' }}>Graphic Design</a>
+              <p style={{color:"white",marginBottom:"2px"}}>
+                <a style={{ display: 'block', marginBottom: '-1px',fontSize:"12px"  }}>Graphic Design</a>
               </p>
             </MDBCol>
 
             <MDBCol md='3' lg='2' xl='2' className='mx-auto mb-4' style={{textAlign:isMobile ?"left":"left", marginTop:isMobile?"20px":"0px"}}>
               <h6 className='text-uppercase fw-bold mb-1' style={{color:"white"}}>Pages</h6>
-              <p style={{color:"white"}}>
-                <a style={{ display: 'block', marginBottom: '1px' }}>Home</a>
+              <p style={{color:"white",marginBottom:"2px"}}>
+                <a style={{ display: 'block', marginBottom: '1px',fontSize:"12px" }}>Home</a>
               </p>
-              <p style={{color:"white"}}>
-                <a style={{ display: 'block', marginBottom: '1px' }}>About us</a>
+              <p style={{color:"white",marginBottom:"2px"}}>
+                <a style={{ display: 'block', marginBottom: '1px',fontSize:"12px" }}>About us</a>
               </p>
-              <p style={{color:"white"}}>
-                <address style={{ display: 'block', marginBottom: '1px' }}>Services</address>
+              <p style={{color:"white",marginBottom:"2px"}}>
+                <address style={{ display: 'block', marginBottom: '1px',fontSize:"12px" }}>Services</address>
               </p>
-              <p style={{color:"white"}}>
-                <a style={{ display: 'block', marginBottom: '1px' }}>Case studies</a>
+              <p style={{color:"white",marginBottom:"2px"}}>
+                <a style={{ display: 'block', marginBottom: '1px',fontSize:"12px" }}>Case studies</a>
               </p>
-              <p style={{color:"white"}}>
-                <a style={{ display: 'block', marginBottom: '1px' }}>Pricing</a>
+              <p style={{color:"white",marginBottom:"2px"}}>
+                <a style={{ display: 'block', marginBottom: '1px',fontSize:"12px" }}>Pricing</a>
               </p>
-              <p style={{color:"white"}}>
-                <a style={{ display: 'block', marginBottom: '1px' }}>Contact us</a>
+              <p style={{color:"white",marginBottom:"2px"}}>
+                <a style={{ display: 'block', marginBottom: '1px',fontSize:"12px" }}>Contact us</a>
               </p>
             </MDBCol>
 
@@ -383,18 +383,18 @@ export default function Footer() {
                   <MDBIcon color='secondary' fab icon='linkedin' />
                 </a>
               </div>
-              <p>
+              <p style={{fontSize:"12px"}}>
                 <MDBIcon color='secondary' icon='home' className='me-2' />
                 Model Town, C-Block Lahore Pakistan
               </p>
-              <p>
+              <p style={{fontSize:"12px"}}>
                 <MDBIcon color='secondary' icon='envelope' className='me-3' />
                 info@musttechsolutions.com
               </p>
-              <p>
+              <p style={{fontSize:"12px"}}>
                 <MDBIcon color='secondary' icon='phone' className='me-3' /> + 01 234 567 88
               </p>
-              <p>
+              <p style={{fontSize:"12px"}}>
                 <MDBIcon color='secondary' icon='print' className='me-3' /> + 01 234 567 89
               </p>
             </MDBCol>

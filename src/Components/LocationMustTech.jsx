@@ -64,7 +64,7 @@
 
 
 // ContactSection.js
-import React from 'react';
+import {React, useState, useEffect} from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -73,13 +73,24 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
 const LocationMustTech = () => {
+  const [expanded, setExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkIsMobile();
+    const intervalId = setInterval(checkIsMobile, 1);
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     // <div className='contianer-fluid' style={{color:'#262424'}}>
 
     <div className='container-fluid' style={{ backgroundColor: "#262424", marginTop: "0px" }}>
     
     <Container style={{backgroundColor:'#262424'}}>
-      <Row style={{paddingTop:"100px"}}>
+      <Row style={{paddingTop:isMobile?"30px":"100px"}}>
         <Col md={6}>
           <div>
             <h2 style={{color:"#FB5C46", marginTop:"100px", marginBottom:"30px", fontSize:"35px"}}>Discover MustTechSolutions</h2>
@@ -107,18 +118,19 @@ const LocationMustTech = () => {
             </MapContainer>
           </div>
         </Col>
-        <Col md={6}>
-          {/* <h2 style={{textAlign:"left"}}> Contact Us</h2> */}
+        {/* <Col md={6} style={{marginTop:"50px"}}> */}
+        <Col md={6} style={{paddingTop:isMobile?"20px":"80px"}}>
+
           <ul style={{ listStyleType: 'none', padding: 0 , marginTop:"100px"}}>
-            <li style={{ display: 'flex', alignItems: 'left', marginBottom: '30px',color:"white", fontSize:"30px",  }}>
+            <li style={{ display: 'flex', alignItems: 'left', marginBottom: '30px',color:"white", fontSize:"25px",  }}>
               <FontAwesomeIcon icon={faMapMarkerAlt} style={{ marginRight: '30px', color:"#FB5C46", }} size='2x' />
               Model Town, C-Block Lahore Pakistan
             </li>
-            <li style={{ display: 'flex', alignItems: 'left', marginBottom: '30px'  , color:"white",fontSize:"30px",}}>
+            <li style={{ display: 'flex', alignItems: 'left', marginBottom: '30px'  , color:"white",fontSize:"25px",}}>
               <FontAwesomeIcon icon={faPhone} style={{ marginRight: '30px', color:"#FB5C46" }} size='2x' />
              (123) 456-7890
             </li>
-            <li style={{ display: 'flex', alignItems: 'left', marginBottom: '30px',color:"white",fontSize:"30px", }}>
+            <li style={{ display: 'flex', alignItems: 'left', marginBottom: '30px',color:"white",fontSize:isMobile?"22px":"25px", }}>
               <FontAwesomeIcon icon={faEnvelope} style={{ marginRight: '30px', color:"#FB5C46" }} size='2x' />
               Info@musttectsolution.com
             </li>
